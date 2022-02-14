@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_dark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:elevation="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <ImageView
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:src="@drawable/gambar_data_v" />
+
+
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan B"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/b_cm"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:id="@+id/edit_b_cm"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            android:inputType="numberDecimal"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Conversi B ke meter"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:enabled="false"
+                        android:layout_toEndOf="@id/b_cm"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/textBConversi"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:id="@+id/textEditBConversiMeter"
+                            android:textSize="15sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan D"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/d_cm"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:id="@+id/edit_d_cm"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Conversi D ke meter"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:enabled="false"
+                        android:layout_toEndOf="@id/d_cm"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/d_conversi_meter"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:id="@+id/edit_d_meter"
+                            android:textSize="15sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan h"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/h_cm"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:id="@+id/edit_h_cm"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Conversi h ke meter"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_toEndOf="@id/h_cm"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:enabled="false"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/h_m"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:id="@+id/edit_h_m"
+                            android:textSize="15sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/hasilQ1"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="10dp"
+                        app:cornerRadius="@dimen/_10sdp"
+                        android:text="Hasil Q/menit dan Q/jam" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        app:cornerRadius="@dimen/_10sdp"
+                        android:text="Bersihkan Data"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hasilQ1"
+                        android:id="@+id/cleanDataCalculator"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textHasilQ1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cleanDataCalculator"
+                        android:layout_marginStart="30dp"
+                        android:maxLength="20"
+                        android:layout_marginTop="-2dp"
+                        android:text="dsfsdf"
+                        android:textSize="@dimen/_20ssp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textHasilQ2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textHasilQ1"
+                        android:layout_marginTop="5dp"
+                        android:maxLength="20"
+                        android:text="dsfsdf"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:textSize="@dimen/_20ssp"
+                        tools:ignore="NotSibling" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewShiPagi"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Masukkan Inputan Sesuai Dengan Jam Kerja Anda"
+                    android:textSize="@dimen/_20ssp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/text2"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Jam1"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputJam1"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:inputType="time"
+                            android:id="@+id/idTimeOne"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Q/Jam 1"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_toEndOf="@id/userInputJam1"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputQ1"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:textSize="18sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Jam2"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputJam2"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:id="@+id/idTimeTwo"
+                            android:inputType="time"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Q/Jam 2"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_toEndOf="@id/userInputJam2"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputQ2"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:textSize="18sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Jam3"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputJam3"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:inputType="time"
+                            android:id="@+id/idTimeThree"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Q/Jam 3"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_toEndOf="@id/userInputJam3"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputQ3"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:textSize="18sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Jam4"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputJam4"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:inputType="time"
+                            android:id="@+id/idTimeFour"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Q/Jam 4"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_toEndOf="@id/userInputJam4"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputQ4"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:textSize="18sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Jam5"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputJam5"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:inputType="time"
+                            android:id="@+id/idTimeFive"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Q/Jam 5"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_toEndOf="@id/userInputJam5"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputQ5"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:textSize="18sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Jam6"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputJam6"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:inputType="time"
+                            android:id="@+id/idTimeSix"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Q/Jam 6"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_toEndOf="@id/userInputJam6"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputQ6"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:textSize="18sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Jam7"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputJam7"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:inputType="time"
+                            android:id="@+id/idTimeSeven"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Q/Jam 7"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_toEndOf="@id/userInputJam7"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputQ7"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:textSize="18sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Jam8"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputJam8"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:inputType="time"
+                            android:id="@+id/idTimeEight"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Masukkan Q/Jam 8"
+                        android:layout_marginTop="5dp"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_toEndOf="@id/userInputJam8"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:boxStrokeColor="@android:color/black"
+                        android:id="@+id/userInputQ8"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_width="@dimen/_150sdp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:drawablePadding="10dp"
+                            android:textSize="18sp"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/black"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hasil"
+                    android:textSize="@dimen/_18ssp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:id="@+id/buttonHasilShiftPagi"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rata Rata Q/Jam"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:id="@+id/rata_rata"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/totalQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:text="fdsfasd"
+                        android:textSize="@dimen/_18ssp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Q/Jam"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:id="@+id/rata_rata_keseluruhan_shift_pagi"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="fdsfasd"
+                        android:id="@+id/totalRataQ"
+                        />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cetak PDF"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:id="@+id/cetakPdfShiftPagi"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Clear"
+                        android:id="@+id/clearButtonPagi"
+                        />
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Share PDF"
+                    android:id="@+id/sharePDf"
+                    app:cornerRadius="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp" />
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</ScrollView>

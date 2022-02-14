@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Debit Kalkulator</string>
+
+    <string name="fitur_help_v_note">Ini adalah fitur untuk VNotch.. Anda akan menghitung VNotch</string>
+
+    <string name="home_note">Ini adalah Home.. Di home ada 2 fitur yaitu VNotch dan UNotch..
+        Fitur ini bisa anda klik dan anda akan diarahkan sesuai dengan klik anda..
+    </string>
+
+    <string name="peringtan_v_note">Jangan pernah input tanda "." dan "," di awal karakter.. Jika anda melakukan hal tersebut.. Anda akan langsung keluar dari aplikasi</string>
+
+    <string name="fitur_help_u_note">Ini adalah fitur untuk UNotch.. Anda akan menghitung UNotch</string>
+
+    <string name="fitur_validasi">Anda tidak mengisi data inputan.. Isi data inputan agar anda mendapatkan hasil Q1 dan Q2</string>
+</resources>
